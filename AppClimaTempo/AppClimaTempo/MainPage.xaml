@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppClimaTempo.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#BB7BED"
+                 Padding="10"
+                 Margin="10">
+
+            <Label Text="Procurar Cidade" 
+               FontSize="Title" 
+               TextColor="AliceBlue"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+            <Label Text="Digite o nome da Cidade"
+               TextColor="AliceBlue"
+               FontSize="Body" />
+
+            <Entry x:Name="cidadeEntry"/>
+
+            <StackLayout Padding="0,0,0,10" VerticalOptions="End">
+                <Button Text="Previsão do Tempo"
+                    x:Name="btnPrevisao"
+                    WidthRequest="185" BorderWidth="1"
+                    Clicked="btnPrevisao_Clicked"/>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="AliceBlue"
+                         Padding="10">
+                <Label Text="Local"/>
+                <Label Text="{Binding Titulo}" TextColor="Black"/>
+                <Label Text="Temperatura"/>
+                <Label Text="{Binding Temperatura}" x:Name="tempLabel" TextColor="Black"/>
+                <Label Text="Local"/>
+                <Label TextColor="Black"/>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
