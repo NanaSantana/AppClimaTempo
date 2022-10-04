@@ -10,12 +10,12 @@
 
             <Label Text="Procurar Cidade" 
                FontSize="Title" 
-               TextColor="AliceBlue"
+               TextColor="White"
                FontAttributes="Bold"
                HorizontalOptions="Center"/>
 
             <Label Text="Digite o nome da Cidade"
-               TextColor="AliceBlue"
+               TextColor="White"
                FontSize="Body" />
 
             <Entry x:Name="cidadeEntry"/>
@@ -27,14 +27,30 @@
                     Clicked="btnPrevisao_Clicked"/>
             </StackLayout>
 
-            <StackLayout BackgroundColor="AliceBlue"
+            <StackLayout BackgroundColor="White"
                          Padding="10">
                 <Label Text="Local"/>
                 <Label Text="{Binding Titulo}" TextColor="Black"/>
+                
                 <Label Text="Temperatura"/>
-                <Label Text="{Binding Temperatura}" x:Name="tempLabel" TextColor="Black"/>
-                <Label Text="Local"/>
-                <Label TextColor="Black"/>
+                <Label Text="{Binding Temperature}" x:Name="tempLabel" TextColor="Black"/>
+                
+                <Label Text="Veloc. Vento"/>
+                <Label Text="{Binding Wind}" x:Name="windLabel" TextColor="Black"/>
+
+                <Label Text="Humildade"/>
+                <Label Text="{Binding Humiduty}" x:Name="humidityLabel" TextColor="Black"/>
+
+                <Label Text="Visibilidade"/>
+                <Label Text="{Binding Visibility}" x:Name="visibilityLabel" TextColor="Black"/>
+
+                <Label Text="Hora Nascimento Sol"/>
+                <Label Text="{Binding Sunrise}" x:Name="sunriseLabel" TextColor="Black"/>
+
+                <Label Text="Hora do pôr do sol"/>
+                <Label Text="{Binding Sunset}" x:Name="sunsetLabel" TextColor="Black"/>
+
+
             </StackLayout>
         </StackLayout>
 
