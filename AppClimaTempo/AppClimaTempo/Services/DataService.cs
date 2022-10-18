@@ -15,7 +15,7 @@ namespace AppClimaTempo.Services
         {
             string appId = "27f3dbe7780d6027b8150a6fd63dd8c1";
 
-            string queryString = "http://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric" + "&appid=" + appId;
+            string queryString = "https://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric" + "&appid=" + appId;
 
             dynamic resultado = await getDataFromService(queryString).ConfigureAwait(false);
 
@@ -63,13 +63,13 @@ namespace AppClimaTempo.Services
         {
             string appId = "27f3dbe7780d6027b8150a6fd63dd8c1";
 
-            string url = string.Format("http://api.openweathermap.org/data/2.5/forecast/daily?q={0}&units=metric&cnt=1&APPID={1}", city.Trim(), appId);
+            string url = string.Format("https://api.openweathermap.org/data/2.5/forecast/daily?q={0}&units=metric&cnt=1&APPID={1}", city.Trim(), appId);
             HttpClient client = new HttpClient();
 
             var response = await client.GetAsync(url);
             dynamic data = null;
 
-            if(response !== null)
+            if(response != null)
             {
                 string json = response.Content.ReadAsStringAsync().Result;
                 data = JsonConvert.DeserializeObject(json);

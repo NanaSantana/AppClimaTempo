@@ -30,7 +30,7 @@
             <StackLayout BackgroundColor="White"
                          Padding="10">
                 <Label Text="Local"/>
-                <Label Text="{Binding Titulo}" TextColor="Black"/>
+                <Label Text="{Binding Title}" TextColor="Black"/>
                 
                 <Label Text="Temperatura"/>
                 <Label Text="{Binding Temperature}" x:Name="tempLabel" TextColor="Black"/>
@@ -39,7 +39,7 @@
                 <Label Text="{Binding Wind}" x:Name="windLabel" TextColor="Black"/>
 
                 <Label Text="Humildade"/>
-                <Label Text="{Binding Humiduty}" x:Name="humidityLabel" TextColor="Black"/>
+                <Label Text="{Binding Humidity}" x:Name="humidityLabel" TextColor="Black"/>
 
                 <Label Text="Visibilidade"/>
                 <Label Text="{Binding Visibility}" x:Name="visibilityLabel" TextColor="Black"/>
